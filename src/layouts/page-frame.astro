@@ -1,0 +1,32 @@
+---
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>title</title>
+        <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html">PCTO</a>
+                <!-- una pagina per attività per pcto -->
+                <a href="index.html">Hobby</a>
+                <a href="index.html">Philosophy</a>
+                <a href="index.html">About Me</a>
+            </nav>
+            <img id="logo" src="Sample_User_Icon.png" alt="Logo" />
+        </header> 
+
+        <slot/>
+        <footer>
+
+        </footer>
+	</body>
+</html>
