@@ -1,27 +1,31 @@
 ---
+export interface Props {
+	title: string;
+}
+
 const { title } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>title</title>
-        <link rel="stylesheet" href="styles.css">
+		<title>{ title }</title>
+        <link rel="stylesheet" href="../styles/styles.css">
 	</head>
 	<body>
 		<header>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="/index/">Home</a>
+                <a href="/index/">Academics</a>
                 <a href="index.html">PCTO</a>
                 <!-- una pagina per attività per pcto -->
-                <a href="index.html">Hobby</a>
+                <a href="index.html">Hobbis</a>
                 <a href="index.html">Philosophy</a>
-                <a href="index.html">About Me</a>
             </nav>
-            <img id="logo" src="Sample_User_Icon.png" alt="Logo" />
+            <img id="logo" src="images/logo.png" alt="Logo" />
         </header> 
 
         <slot/>
@@ -30,3 +34,34 @@ const { title } = Astro.props;
         </footer>
 	</body>
 </html>
+
+<style>
+    @import"https://fonts.googleapis.com/css?family=Zen+Dots";
+
+header {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+
+    background:linear-gradient(to top left,#272bff,#066df300,#3780ee),linear-gradient(to top right,#105cff,#066df300,#20b8ff) #002fff;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    display: inline-flex;
+    width: 80%;
+    justify-content: center;
+    align-content: center
+}
+
+nav>a {
+    width: 20%;
+    text-decoration: none;
+    color: #fff;
+}
+</style>
