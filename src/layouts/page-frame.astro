@@ -1,67 +1,116 @@
 ---
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ title }</title>
-        <link rel="stylesheet" href="../styles/styles.css">
-	</head>
-	<body>
-		<header>
+<html lang="en" transition:animate="slide">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="images/logo.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title} | Emanuele Eirale</title>
+    </head>
+    <body>
+        <header>
             <nav>
-                <a href="/index/">Home</a>
-                <a href="/index/">Academics</a>
-                <a href="index.html">PCTO</a>
+                <a href="/eeirale.github.io/" target="_top">Home</a>
+                <a href="/eeirale.github.io/academic" target="_top">Academics</a
+                >
+                <a href="/eeirale.github.io/pcto" target="_top">PCTO</a>
                 <!-- una pagina per attività per pcto -->
-                <a href="index.html">Hobbis</a>
-                <a href="index.html">Philosophy</a>
+                <a href="/eeirale.github.io/hobby" target="_top">Hobbis</a>
+                <a href="/eeirale.github.io/philosophy" target="_top">Philosophy</a>
             </nav>
             <img id="logo" src="images/logo.png" alt="Logo" />
-        </header> 
+        </header>
 
-        <slot/>
+        <slot />
         <footer>
-
+            <p>©2024</p>
+            <p>site developed by <a href="https://www.linkedin.com/in/emanuele-eirale-5e8534/" id="dev-tag"> Emanuele Eirale </a></p>
         </footer>
-	</body>
+    </body>
 </html>
 
 <style>
-    @import"https://fonts.googleapis.com/css?family=Zen+Dots";
+    @import "https://fonts.googleapis.com/css?family=Zen+Dots";
+    @import "https://fonts.googleapis.com/css2?family=Raleway";
+    html {
+        min-height: 100%;
+    }
+    
+    body{
+        margin: 0 auto;
+    }
 
-header {
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-    align-content: center;
+    header {
+        display: inline-flex;
+        width: 100%;
+        min-height: 50px;
+        justify-content: center;
+        align-content: center;
 
-    background:linear-gradient(to top left,#272bff,#066df300,#3780ee),linear-gradient(to top right,#105cff,#066df300,#20b8ff) #002fff;
-}
+        background:
+            linear-gradient(to top left, #272bff, #066df300, #3780ee),
+            linear-gradient(to top right, #105cff, #066df300, #20b8ff) #002fff;
+    }
 
-#logo {
-    width: 50px;
-    height: auto;
-}
+    #logo {
+        width: 50px;
+        height: auto;
+    }
 
-nav {
-    display: inline-flex;
-    width: 80%;
-    justify-content: center;
-    align-content: center
-}
+    nav {
+        display: inline-flex;
+        width: 80%;
+        justify-content: center;
+        align-content: center;
+    }
 
-nav>a {
-    width: 20%;
-    text-decoration: none;
-    color: #fff;
-}
+    nav > a {
+        width: 20%;
+        text-decoration: none;
+        text-align: center;
+        font-family: Raleway;
+        font-weight: bold;
+        font-size: 1.0vw;
+        color: #fff;
+        line-height: 50px;
+    }
+
+    nav > a:hover {
+        background-color: #ffffff88;
+        border-radius: 20px;
+        font-size: 1.1vw;
+    }
+
+    footer {
+        width: 100%;
+        min-height: 50px;
+        justify-content: center;
+        align-content: center;
+
+        color:#fff;
+
+        background:
+            linear-gradient(to top left, #272bff, #066df300, #3780ee),
+            linear-gradient(to top right, #105cff, #066df300, #20b8ff) #002fff;
+    }
+    p {
+        font-family: Raleway;
+        text-align: center;
+    }
+    #dev-tag {
+        text-decoration: none;
+        font-family: Raleway;
+    }
+
+    #dev-tag:visited {
+        text-decoration: none;
+        font-family: Raleway;
+    }
 </style>
