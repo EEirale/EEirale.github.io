@@ -1,21 +1,68 @@
 ---
-import Frame from '../layouts/page-frame.astro';
-import Card from '../components/card.astro';
+import Frame from "../layouts/page-frame.astro";
+import Card from "../components/card.astro";
 ---
+
 <Frame title="PCTO">
-	<div id="activities-container">
-        <Card href="/pcto/progecta" title="Progecgta" role="Tecnico Informatico - Sviluppatore" img="../images/brand-progecta.svg"></Card>
-        <Card href="/pcto/infn" title="INFN" role="Progetto Lab2Go" img="../images/lab2go-logo.png"></Card>
-        <Card href="/pcto/fondazione" title="Fondazione Pietro e Giovanni Ferrero" role="Assistente di Sala" img="../images/fondazione-ferrero.webp"></Card>
-        <Card href="/pcto/tutor" title="Peer-to-Peer Tutoring" role="Tutor di Inglese" img="../images/Cocito Logo Design.svg"></Card>
+    <div>
+        <h1>PCTO</h1>
+        <p>I PCTO, percorsi per le competenze trasversali e per l'orientamento, consistono in un periodo di formazione teorica in classe e uno di esperienza più pratica presso un’azienda o un ente di altro genere - pubblico o privato - in cui si decide di svolgere il periodo pratico.</p>
+    </div>
+    <div id="activities-container">
+        <Card
+            href="/pcto/progecta"
+            title="Progecgta"
+            role="Tecnico Informatico - Sviluppatore"
+            img="/images/brand-progecta.svg"
+            hours="40"
+            classe="3°E"
+        />
+        <Card
+            href="/pcto/infn"
+            title="INFN"
+            role="Progetto Lab2Go"
+            img="../images/lab2go-logo.png"
+            hours="30"
+            classe="4°E"
+        />
+        <Card
+            href="/pcto/fondazione"
+            title="Fondazione Pietro e Giovanni Ferrero"
+            role="Assistente di Sala"
+            img="../images/fondazione-ferrero.webp"
+            hours="15"
+            classe="4°E"
+        />
+        <Card
+            href="/pcto/tutor"
+            title="Peer-to-Peer Tutoring"
+            role="Tutor di Inglese"
+            img="../images/Cocito Logo Design.svg"
+            hours="30"
+            classe="3°E"
+        />
     </div>
 </Frame>
 
 <style>
-    #activities-container {
+    @import "https://fonts.googleapis.com/css2?family=Raleway";
+    @import "https://fonts.googleapis.com/css2?family=Zen Dots";
+    div {
         display: flex;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    h1 {
+        width: 80%;
+        font-family: Zen Dots;
+        font-size: 3rem;
+    }
+
+    p{
+        font-family: Raleway;
+        max-width: 100ch;
+        padding: 5px 10px;
     }
 </style>

@@ -4,9 +4,12 @@ export interface Props {
     role: string;
     href: string;
     img: string;
+    hours: string;
+    classe: string;
+
 }
 
-const { href, title, role, img } = Astro.props;
+const { href, title, role, img, hours, classe } = Astro.props;
 ---
 
 <div class="dynamic">
@@ -20,6 +23,14 @@ const { href, title, role, img } = Astro.props;
                     {role}
                 </h2>
             </div>
+            <table>
+                    <tr>
+                        <td>Ore: </td>
+                        <td>{hours}</td>
+                        <td>Classe:</td>
+                        <td>{classe}</td>
+                    </tr>
+            </table>
         </a>
     </div>
 </div>
@@ -27,9 +38,9 @@ const { href, title, role, img } = Astro.props;
 <style>
     @import "https://fonts.googleapis.com/css2?family=Raleway";
     .dynamic {
-        width: 50%;
+        width: 75%;
         margin: 20px 0px;
-        height: 250px;
+        height: 300px;
 
         align-items: center;
         padding: auto;
@@ -40,14 +51,10 @@ const { href, title, role, img } = Astro.props;
         border-radius: 10px;
         border: 1px solid;
         border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
-        transition-duration: 2s;
-        &:hover {
+        transition-duration: 1.5s;
+        &:hover{
             transform: perspective(800px) rotateY(-4deg);
-
-            .image {
-                width: initial + 100px;
-                height: auto;
-            }
+            transform: scale(1.1);
         }
     }
     div {
@@ -72,6 +79,13 @@ const { href, title, role, img } = Astro.props;
         text-align: center;
         color: black;
         text-decoration: none;
+    }
+
+    table{
+        width: 100%;
+    }
+    td{
+        width: 25%;
     }
 
 </style>
