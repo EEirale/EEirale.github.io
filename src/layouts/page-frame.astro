@@ -9,7 +9,7 @@ const { title } = Astro.props;
 <html lang="en" transition:animate="slide">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="images/logo.png" />
+        <link rel="icon" type="image/svg+xml" href="../images/logo.png" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{title} | Emanuele Eirale</title>
@@ -22,10 +22,10 @@ const { title } = Astro.props;
                 >
                 <a href="/pcto" target="_top">PCTO</a>
                 <!-- una pagina per attività per pcto -->
-                <a href="/hobby" target="_top">Hobbis</a>
+                <a href="/hobby" target="_top">Hobbies</a>
                 <a href="/philosophy" target="_top">Philosophy</a>
             </nav>
-            <img id="logo" src="images/logo.png" alt="Logo" />
+            <img id="logo" src="../images/logo.png" alt="Logo" />
         </header>
 
         <slot />
@@ -54,9 +54,7 @@ const { title } = Astro.props;
         justify-content: center;
         align-content: center;
 
-        background:
-            linear-gradient(to top left, #272bff, #066df300, #3780ee),
-            linear-gradient(to top right, #105cff, #066df300, #20b8ff) #002fff;
+        background-color:#00025f;
     }
 
     #logo {
@@ -96,9 +94,7 @@ const { title } = Astro.props;
 
         color:#fff;
 
-        background:
-            linear-gradient(to top left, #272bff, #066df300, #3780ee),
-            linear-gradient(to top right, #105cff, #066df300, #20b8ff) #002fff;
+        background-color:#00025f;
     }
     p {
         font-family: Raleway;
