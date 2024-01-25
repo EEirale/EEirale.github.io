@@ -6,7 +6,13 @@ import Card from "../components/card.astro";
 <Frame title="PCTO">
     <div>
         <h1>PCTO</h1>
-        <p>I PCTO, percorsi per le competenze trasversali e per l'orientamento, consistono in un periodo di formazione teorica in classe e uno di esperienza più pratica presso un’azienda o un ente di altro genere - pubblico o privato - in cui si decide di svolgere il periodo pratico.</p>
+        <p>
+            I <b>PCTO</b>, <i>percorsi per le competenze trasversali e per l'orientamento</i>, 
+            consistono in un periodo di formazione teorica in classe e uno di esperienza 
+            più pratica presso un’azienda o un ente di altro genere - pubblico o privato - 
+            in cui si decide di svolgere il periodo pratico. <br />
+            Il monte ore minimo da totalizzare nel triennio di Scuola Secondaria di Secondo Grado è di <b>90 ore</b>.
+        </p>
     </div>
     <div id="activities-container">
         <Card
@@ -45,8 +51,6 @@ import Card from "../components/card.astro";
 </Frame>
 
 <style>
-    @import "https://fonts.googleapis.com/css2?family=Raleway";
-    @import "https://fonts.googleapis.com/css2?family=Zen Dots";
     div {
         display: flex;
         align-items: center;
@@ -60,9 +64,4 @@ import Card from "../components/card.astro";
         font-size: 3rem;
     }
 
-    p{
-        font-family: Raleway;
-        max-width: 100ch;
-        padding: 5px 10px;
-    }
 </style>

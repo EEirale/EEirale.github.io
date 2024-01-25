@@ -1,15 +1,16 @@
-# Astro
+# 🚀 Astro 
+https://astro.build/  
 
-## 👨‍💻 Project Structure
+## 👨‍💻 Project Structure  
 
 /
-├── public/ 
+├── public/                         contiene i media per il sito  
 ├── src/  
 │   └── components/  
 │           └── card.astro          Pannello di presentazione Pagina PCTO  
-│   └── layouts/
+│   └── layouts/  
 │           └── page-frame.astro    Struttura di Base della Pagina (Header-Footer)  
-│   └── pages/
+│   └── pages/  
 │       └── pcto/               ⚙️pagine PCTO  
 │           └── progecta.astro  
 │           └── infn.astro  

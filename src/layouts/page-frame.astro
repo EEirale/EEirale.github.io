@@ -12,6 +12,7 @@ const { title } = Astro.props;
         <link rel="icon" type="image/svg+xml" href="../images/logo.png" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" type="text/css" href="src/styles/styles.css" />
         <title>{title} | Emanuele Eirale</title>
     </head>
     <body>
@@ -30,87 +31,8 @@ const { title } = Astro.props;
 
         <slot />
         <footer>
-            <p>©2024</p>
-            <p>site developed by <a href="https://www.linkedin.com/in/emanuele-eirale-5e8534/" id="dev-tag"> Emanuele Eirale </a></p>
+            <p class="center-text">©2024</p>
+            <p class="center-text">site developed by <a href="https://www.linkedin.com/in/emanuele-eirale-5e8534/" id="dev-tag"> Emanuele Eirale </a></p>
         </footer>
     </body>
 </html>
-
-<style>
-    @import "https://fonts.googleapis.com/css?family=Zen+Dots";
-    @import "https://fonts.googleapis.com/css2?family=Raleway";
-    html {
-        min-height: 100%;
-    }
-    
-    body{
-        margin: 0 auto;
-        scrollbar-width: 0;
-    }
-
-    header {
-        display: inline-flex;
-        width: 100%;
-        height: 50px;
-        justify-content: center;
-        align-content: center;
-
-        background-color:#00025f;
-        z-index: 0;
-    }
-
-    #logo {
-        width: 45px;
-        height: auto;
-    }
-
-    nav {
-        display: inline-flex;
-        width: 80%;
-        justify-content: center;
-        align-content: center;
-    }
-
-    nav > a {
-        width: 20%;
-        text-decoration: none;
-        text-align: center;
-        font-family: Raleway;
-        font-weight: bold;
-        font-size: 1rem;
-        color: #fff;
-        line-height: 50px;
-    }
-
-    nav > a:hover {
-        background-color: #ffffff88;
-        border-radius: 20px;
-        font-size: 1.2rem;
-    }
-
-    footer {
-        width: 100%;
-        min-height: 50px;
-        justify-content: center;
-        align-content: center;
-
-        color:#fff;
-
-        background-color:#00025f;
-    }
-    p {
-        font-family: Raleway;
-        text-align: center;
-    }
-    #dev-tag {
-        text-decoration: none;
-        font-family: Raleway;
-        color: #fff;
-    }
-
-    #dev-tag:visited {
-        text-decoration: none;
-        font-family: Raleway;
-        color: #fff;
-    }
-</style>
