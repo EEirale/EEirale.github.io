@@ -2,6 +2,41 @@
 import Frame from '../../layouts/page-frame.astro';
 ---
 <Frame title="ASSISTENTE DI SALA">
-	<img src="" />
-	<h1>ASSISTENTE DI SALA</h1>
+	<div>
+		<img class="image" src="../../../public/images/canto-le-armi-e-luomo.jpg" alt="canto le armi e l'uomo"/>
+		<h1>CANTO LE ARMI E L'UOMO</h1>
+		<h2>ASSISTENTE DI SALA</h2>
+	</div>
 </Frame>
+
+<style>
+	div {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 30%;
+	}
+	.image {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
+
+    h1 {
+        width: 80%;
+        font-family: Zen Dots;
+        font-size: 3rem;
+		text-align: center;
+		margin-top: 100px;
+    }
+	h2 {
+        width: 80%;
+        font-family: Zen Dots;
+        font-size: 2.5rem;
+		text-align: center;
+		margin-top: 50px;
+    }
+</style>

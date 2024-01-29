@@ -12,6 +12,10 @@ body {
     height: 100%;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 header {
     display: inline-flex;
     width: 100%;
