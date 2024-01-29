@@ -21,17 +21,16 @@ import "../styles/styles.css"
         <header>
             <nav>
                 <a href="/" target="_top">Home</a>
-                <a href="/academic" target="_top">Academics</a
-                >
+                <a href="/academic" target="_top">Academics</a>
                 <a href="/pcto" target="_top">PCTO</a>
-                <!-- una pagina per attività per pcto -->
                 <a href="/hobby" target="_top">Hobbies</a>
                 <a href="/philosophy" target="_top">Philosophy</a>
             </nav>
             <img id="logo" src="../images/logo.png" alt="Logo" />
         </header>
-
-        <slot />
+        <main>
+            <slot />
+        </main>
         <footer>
             <p class="center-text">©2024</p>
             <p class="center-text">site developed by <a href="https://www.linkedin.com/in/emanuele-eirale-5e8534/" id="dev-tag"> Emanuele Eirale </a></p>

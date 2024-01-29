@@ -1,39 +1,76 @@
 ---
-import Frame from '../layouts/page-frame.astro';
+import Frame from "../layouts/page-frame.astro";
+import "../styles/styles.css";
 ---
+
 <Frame title="HOME">
 	<div id="presentaion-container">
 		<h1>EMANUELE EIRALE</h1>
 		<div id="motto-container">
-			<span>Studente</span> <span>Sognatore</span> <span>Io</span>
+			<span>Studente</span>
+			<span>Sognatore</span>
+			<span>Io</span>
 		</div>
+		<div id="greeting-container">
+			<p>Ciao, Benvenuto sul mio sito di presentazione!</p>
+			<p>
+				🚀 Esplora il mio curriculum e scopri le mie <a
+					href="/pcto"
+					target="_top">esperienze lavorative</a
+				>, la mia <a href="/academic" target="_top">formazione</a> e le mie
+				<a href="/hobby" target="_top">passioni</a>, tutto a portata di
+				click.
+			</p>
 		</div>
-		
 	</div>
 </Frame>
 
 <style>
 	#presentaion-container {
-
+		display: flex;
+		background-image: url("../../public/images/milky_way_galaxy_background.jpeg");
+		height: calc(100vh - 100px);
+		/* margin-top: -35px; */
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	h1 {
 		text-align: center;
 		font-family: Zen Dots;
-		font-size: 3rem;
+		font-size: 4rem;
+		color: #fff;
 	}
 
 	#motto-container {
 		display: inline-flex;
 		justify-content: space-evenly;
-        align-content: center;
-		
+		align-content: center;
+
 		width: 100%;
 	}
-	#motto-container > span{
+	#motto-container > span {
 		text-align: center;
 		font-family: Zen Dots;
-		font-size: 1.5vh;
+		font-size: 2rem;
+		color: #fff;
 	}
 
+	#greeting-container {
+		margin-top: 25px;
+	}
+
+	p {
+		font-family: Raleway;
+		max-width: 100ch;
+		padding: 5px 10px;
+		color: #fff;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+
+	a {
+		color: #fff;
+	}
 </style>
