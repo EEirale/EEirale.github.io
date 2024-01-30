@@ -2,5 +2,35 @@
 import Frame from '../../layouts/page-frame.astro';
 ---
 <Frame title="PROGECTA">
-	<h1>PROGECTA</h1>
+	<div>
+		<img class="image" src="../../../public/images/lab2go-banner.png" alt="canto le armi e l'uomo"/>
+	</div>
+	<div>
+		<h1>PROGECTA - Sviluppatore informatico</h1>
+	</div>
+	
 </Frame>
+
+<style>
+	div {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		height: 30%;
+	}
+	.image {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
+
+    h1 {
+        width: 80%;
+        font-family: Zen Dots;
+        font-size: 3rem;
+		text-align: center;
+		margin-top: 100px;
+    }
+</style>
