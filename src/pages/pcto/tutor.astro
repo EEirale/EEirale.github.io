@@ -1,6 +1,55 @@
 ---
-import Frame from '../../layouts/page-frame.astro';
+import Frame from "../../layouts/page-frame.astro";
 ---
+
 <Frame title="TUTOR">
-	<h1>TUTOR</h1>
+	<div class="container">
+		<div>
+			<h1>LICEO SCIENTIFICO "LEONARDO COCITO"</h1>
+			<h2>TUTOR DI INGLESE</h2>
+		</div>
+		<img
+			class="image"
+			src="../../../public/images/scuola.jpg"
+			alt="immagine cortile esterno"
+		/>
+	</div>
+	<div class="container ">
+
+	</div>
+	<div class="container">
+
+	</div>
 </Frame>
+
+<style>
+	div.container {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		max-height: 30%;
+		border-color: #ff8800;
+		border-bottom: 2px;
+	}
+
+	.image {
+		max-height: 2300px;
+		padding: 10%;
+	}
+
+	h1 {
+		width: 80%;
+		font-family: Zen Dots;
+		font-size: 3rem;
+		text-align: center;
+		margin-top: 100px;
+	}
+	h2 {
+		width: 80%;
+		font-family: Zen Dots;
+		font-size: 2.5rem;
+		text-align: center;
+		margin-top: 50px;
+	}
+</style>
