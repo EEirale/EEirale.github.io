@@ -1,54 +1,186 @@
 ---
+import Spacer from '../../components/spacer.astro';
 import Frame from '../../layouts/page-frame.astro';
 ---
 <Frame title="PROGECTA">
-	<div class="container">
-		<div>
-			<h1>PROGECTA</h1>
-			<h2>TECNICO SVILUPPATORE</h2>
+	<div class="page">
+		<div class="container">
+			<div class="title">
+				<h1>PROGECTA</h1>
+				<h2>TECNICO SVILUPPATORE</h2>
+			</div>
+			<div>
+				<h3>40 ore</h3>
+			</div>
+			<img class="pres-img" src="../../images/progecta/slide-2.webp" />
 		</div>
-		<img
-			class="image"
-			src="../../../public/images/Progecta-banner.png"
-			alt="immagine cortile esterno"
-		/>
+		<div class="container vertical">
+			<div id="info-box">
+				<div id="info">
+					<img src="../../images/progecta/siemens-logo.png" />
+					<div>
+						<h3>SIEMENS SCADA</h3>
+						<p>
+							Sviluppo di PLC e interfacce operatore per il controllo e la regolazione dei flussi di carico e scarico di prelavorato di cacao. Attualmente impiegato nello stabilimento Ferrero di Bloomington (IL).
+						</p>
+					</div>
+				</div>
+				<div id="info">
+					<img src="../..//images/progecta/ROK.png" />
+					<div>
+						<h3>ROCKWELL AUTOMATION SCADA</h3>
+						<p>
+							Sviluppo di PLC e interfacce operatore per il controllo e la regolazione di impastatrici e erogatori per la crema Tronky. Attualmente impiegato nello stabilimento Ferrero di Pozzuoli (NA).
+						</p>
+					</div>
+				</div>
+				<div id="info">
+					<img src="../../images/progecta/excel-logo.png" />
+					<div>
+						<h3>DATA ANALYSIS - EXCEL</h3>
+						<p>
+							Analisi dati di pesatura e controllo degli errori di macchinari e operatori nel dosaggio e nell'erogazione di ingrediendi e prelavorati per crema spalmabile. Dati dello stabilimento l'Oréal di Settimo Torinese (TO)
+						</p>
+					</div>
+				</div>
+				<div id="info">
+					<img src="../../images/progecta/ignition-logo.png" />
+					<div>
+						<h3>IGNITOIN SCADA</h3>
+						<p>
+							Sviluppo di e interfacce operatore SCADA per il controllo e la regolazione di caldaie e macchinari termici per la lavorazione di resine e metalli. Attualmente impiegato nello stabilimento Abet Laminati di Bra (CN).
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="company-slider">
+				<div class="slider">
+					<div>
+						<img class="slide" src="../../images/brand-progecta.svg" />
+					</div>
+					<div>
+						<img class="slide" src="../../images/progecta/ferrero.webp" />
+					</div>
+					<div>
+						<img class="slide" src="../../images/progecta/oreal.webp" />
+					</div>
+					<div>
+						<img class="slide" src="../../images/progecta/Logo_Nexa.png" />
+					</div>
+					<div>
+						<img class="slide" src="../../images/progecta/ignitionLogo@2x.png" />
+					</div>
+					<div>
+						<img class="slide" src="../../images/progecta/abet-laminati-logo.png" />
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="container ">
-
-	</div>
-	<div class="container">
-
-	</div>
+	<Spacer />
 </Frame>
 
 <style>
-	div.container {
-		display: flex;
+	.pres-img {
+		max-height: 500px;
+		width: auto;
+	}
+
+	div.page {
 		width: 100%;
+
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		max-height: 30%;
-		border-color: #ff8800;
-		border-bottom: 2px;
+
+		margin-bottom: 50px;
+	}
+	div.title {
+		display: block;
+		width: 60%;
+		max-heightht: 45%;
+	}
+	div.container {
+		display: flex;
+		width: 75%;
+		align-items: center;
+		justify-content: center;
+
 	}
 
 	.image {
-		max-height: 2300px;
+		max-height: 230px;
 		padding: 10%;
+
 	}
 
 	h1 {
-		width: 80%;
+		width: 50%;
 		font-family: Zen Dots;
 		font-size: 3rem;
-		text-align: center;
 		margin-top: 100px;
 	}
 	h2 {
-		width: 80%;
+		width: 50%;
 		font-family: Zen Dots;
 		font-size: 2.5rem;
-		text-align: center;
 		margin-top: 50px;
+	}
+	.vertical {
+		flex-direction: column;
+	}
+
+	#info {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@keyframes scroll {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-250px * 6))}
+	}
+
+	#company-slider {
+		height: 100px;
+		width: 50%;
+		margin: auto;
+		overflow:hidden;
+
+		&::before,
+		&::after {
+			content: "";
+			height: 100px;
+			width: 200px;
+			z-index: 2;
+		}
+
+		&::after {
+			right: 0;
+			top: 0;
+			transform: rotateZ(180deg);
+		}
+
+		&::before {
+			left: 0;
+			top: 0;
+		}
+
+		.slider {
+			animation: scroll 30s linear infinite;
+			display: flex;
+			width: calc(250px * 12);
+		}
+	
+		.slide {
+			height: 100px;
+			width: 250px;
+			object-fit: scale-down;
+		}
+	}
+
+	#info>img {
+		height: 150px;
+		width: auto;
 	}
 </style>
