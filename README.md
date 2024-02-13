@@ -1,15 +1,16 @@
 # 🚀 Astro 
 https://astro.build/  
-> Speed
-> Island architecture
-> Scoped css
-> Multi-Framework compatibility
+> Speed  
+> Island architecture  
+> Scoped css  
+> Multi-Framework compatibility  
 
 ## 👨‍💻 Project Structure  
 
 /  
 ├── public/ &#8594; 🖼️ contiene i media per il sito  
 │&emsp;└── images/  
+│&emsp;&emsp;└── progecta/  
 ├── src/  
 │&emsp;└── components/  
 │&emsp;&emsp;└── card.astro &#8594; Pannello di reindirizzazione Pagina PCTO  

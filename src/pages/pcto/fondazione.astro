@@ -2,21 +2,47 @@
 import Frame from '../../layouts/page-frame.astro';
 ---
 <Frame title="ASSISTENTE DI SALA">
-	<div>
-		<img class="image" src="../../../public/images/canto-le-armi-e-luomo.jpg" alt="canto le armi e l'uomo"/>
-		<h1>CANTO LE ARMI E L'UOMO</h1>
-		<h2>ASSISTENTE DI SALA</h2>
+	<img class="image" src="../../../public/images/canto-le-armi-e-luomo.jpg" alt="canto le armi e l'uomo"/>
+	<div class="page">
+		<div class="container vertical">
+				<h1>FONDAZIONE "GIOVANNI E PIETRO FERRERO"</h1>
+			<div class="inline">
+				<h2>CANTO LE ARMI E L'UOMO</h2>
+				<h2> 13 ORE</h2>
+			</div>
+		</div>
+		<div class="container">
+			<div>
+				<h3>ASSISTENTE DI SALA</h3>
+				<p>
+					Servizio di Assistenza di Sala presso la mostra "Canto le Armi e l'Uomo" tenutasi in Fondazione Ferrero in onore dello scrittore albese Beppe Fenoglio.
+				</p>
+			</div>
+		</div>
 	</div>
 </Frame>
 
 <style>
-	div {
-		display: flex;
+	div.page {
 		width: 100%;
+
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		margin-bottom: 50px;
+	}
+	div.container {
+		display: flex;
+		width: 75%;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.vertical {
 		flex-direction: column;
-		height: 30%;
 	}
 	.image {
 		width: 100%;
@@ -25,18 +51,22 @@ import Frame from '../../layouts/page-frame.astro';
 		z-index: -1;
 	}
 
+	.inline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+    }
     h1 {
-        width: 80%;
+        width: 70%;
         font-family: Zen Dots;
         font-size: 3rem;
-		text-align: center;
-		margin-top: 100px;
+		margin-top: 200px;
+		margin-left: 100px;
     }
 	h2 {
         width: 80%;
-        font-family: Zen Dots;
         font-size: 2.5rem;
-		text-align: center;
-		margin-top: 50px;
+		margin-left: 50px;
     }
 </style>
