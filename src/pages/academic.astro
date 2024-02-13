@@ -1,70 +1,137 @@
 ---
 import Frame from "../layouts/page-frame.astro";
 import Exam from "../components/exam.astro";
+import School from "../components/school.astro";
 import Spacer from "../components/spacer.astro";
 ---
 
 <Frame title="ACADEMICS">
 	<h1>ACADEMICS</h1>
-	<Exam
-		name="Key English Test"
-		short="KET"
-		href="https://www.cambridgeenglish.org/exams-and-tests/key/"
-		img="../../public/images/cambridge-assessment-international-education.png"
-		issuer="Cambridge Assessment International"
-		score="139"
-		level="A2"
-		dates="14/05/2022 - //"
-	/>
-	<Exam
-		name="Preliminary English Test"
-		short="PET"
-		href="https://www.cambridgeenglish.org/exams-and-tests/preliminary/"
-		img="../../public/images/cambridge-assessment-international-education.png"
-		issuer="Cambridge Assessment International"
-		score="158"
-		level="B1"
-		dates="14/05/2022 - //"
-	/>
-	<Exam
-		name="First Certificate in English"
-		short="FCE"
-		href="https://www.cambridgeenglish.org/exams-and-tests/first/"
-		img="../../public/images/cambridge-assessment-international-education.png"
-		issuer="Cambridge Assessment International"
-		score="189"
-		level="B2"
-		dates="14/05/2022 - //"
-	/>
-	<Exam
-		name="Certificate in Advanced English"
-		short="CAE"
-		href="https://www.cambridgeenglish.org/exams-and-tests/advanced/"
-		img="../../public/images/cambridge-assessment-international-education.png"
-		issuer="Cambridge Assessment International"
-		score="200"
-		level="C2"
-		dates="14/05/2022 - //"
-	/>
-	<Exam
-		name="International English Language Testing System"
-		short="IELTS"
-		href="https://www.cambridgeenglish.org/exams-and-tests/advanced/"
-		img="../../public/images/IELTS-logo.png"
-		issuer="British Council - Cambridge Assessment English"
-		score="8"
-		level="C1"
-		dates="14/05/2022 - //"
-	/>
-	<Exam
-		name="Scholastic Aptitude Test"
-		short="SAT"
-		href="https://www.cambridgeenglish.org/exams-and-tests/advanced/"
-		img="../../public/images/SAT-logo.webp"
-		issuer="College Board"
-		score="1540"
-		level="99% percentile"
-		dates="14/05/2022 - //"
-	/>
+	<div class="section">
+	</div>
+	<div class="section">
+		<div class="text-box">
+			<h2>Istituti</h2>
+		</div>
+		<School     
+			img="../../public/images/coppino.webp"
+			logo="../../public/images/IC-CENTRO-STORICO.png"
+			name="Scuola Primaria di Secondo Grado &quot;Michele Coppino&quot;"
+			org="Istituto Comprensivo Centro Storico - Alba"
+			years="2011-2016"
+			section="Sezione: C"
+			href="https://www.centrostoricoalba.edu.it/presentazione-scuola-primaria-m-coppino-per-iscrizioni-classi-prime-a-s-2024-25/" 
+		/>
+		<School     
+			img="../../public/images/istitutocentrostoricoalba-scaled.jpg"
+			logo="../../public/images/IC-CENTRO-STORICO.png"
+			name="Scuola Secondaria di Primo Grado &quot;Girolamo Vida&quot;"
+			org="Istituto Comprensivo Centro Storico - Alba"
+			years="2016 - 2019"
+			section="Sezione: G"
+			href="https://www.centrostoricoalba.edu.it/presentazione-scuola-sec-i-grado-g-vida-a-s-2023-2024/" 
+		/>
+		<School     
+			img="../../public/images/scuola.jpg"
+			logo="../../public/images/Cocito Logo Design.svg"
+			name="Liceo Scientifico Statale &quot;Leonardo Cocito&quot;"
+			org="Homepage"
+			years="2019-2024"
+			section="Sezione: E - Indirizzo Scienze Applicate, Potenziamento Informatico"
+			href="https://www.liceococito.edu.it/" 
+		/>
+		<div class="text-box">
+			<h2>Esami</h2>
+		</div>
+		<Exam
+			name="Key English Test"
+			short="KET"
+			href="https://www.cambridgeenglish.org/exams-and-tests/key/"
+			img="../../public/images/cambridge-assessment-international-education.png"
+			issuer="Cambridge Assessment International"
+			score="139"
+			level="A2"
+			dates="2018 - "
+		/>
+		<Exam
+			name="Preliminary English Test"
+			short="PET"
+			href="https://www.cambridgeenglish.org/exams-and-tests/preliminary/"
+			img="../../public/images/cambridge-assessment-international-education.png"
+			issuer="Cambridge Assessment International"
+			score="158"
+			level="B1"
+			dates="2019 - "
+		/>
+		<Exam
+			name="First Certificate in English"
+			short="FCE"
+			href="https://www.cambridgeenglish.org/exams-and-tests/first/"
+			img="../../public/images/cambridge-assessment-international-education.png"
+			issuer="Cambridge Assessment International"
+			score="189"
+			level="B2"
+			dates="2021 - "
+		/>
+		<Exam
+			name="Certificate in Advanced English"
+			short="CAE"
+			href="https://www.cambridgeenglish.org/exams-and-tests/advanced/"
+			img="../../public/images/cambridge-assessment-international-education.png"
+			issuer="Cambridge Assessment International"
+			score="200"
+			level="C2"
+			dates="14/05/2022 - "
+		/>
+		<Exam
+			name="International English Language Testing System"
+			short="IELTS"
+			href="https://ielts.org/"
+			img="../../public/images/IELTS-logo.png"
+			issuer="British Council - Cambridge Assessment English"
+			score="8"
+			level="C1"
+			dates="03/09/2022 - 03/09/2024"
+		/>
+		<Exam
+			name="Scholastic Aptitude Test"
+			short="SAT"
+			href="https://satsuite.collegeboard.org/sat"
+			img="../../public/images/SAT-logo.webp"
+			issuer="College Board"
+			score="1540"
+			level="99% percentile"
+			dates="26/08/2023 - "
+		/>
+	</div>
 	<Spacer/>
 </Frame>
+
+<style>
+	h1 {
+		font-family: Zen Dots;
+		width: 80%;
+        font-family: Zen Dots;
+        font-size: 3rem;
+
+		padding-left: 30px;
+	}
+	h2 {
+		font-family: Zen Dots;
+		width: 80%;
+        font-family: Zen Dots;
+        font-size: 2rem;
+	}
+	.section {
+		display: flex;
+		align-items: center;
+        flex-direction: column;
+
+		border-bottom: 2px solid black;
+	}
+
+	.text-box {
+		width: 90%;
+		border-bottom: 2px solid #cecece;
+	}
+</style>

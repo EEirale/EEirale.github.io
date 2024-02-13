@@ -39,8 +39,9 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
     .container {
         display: flex;
         align-items: center;
+        justify-content: center;
 
-        width: 50%;
+        width: 65%;
         margin: 20px 0px;
         max-height: 350px;
 
@@ -58,7 +59,7 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
         &:hover {
             width: 75%;
             #title{
-                width: 100%;
+                width: 75%;
 
                 .short {
                     opacity: 0;
@@ -74,11 +75,12 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
 
     .pad {
         margin-left: 15px;
+        width: 75%;
     }
 
     img {
-        max-height: 300px;
-        width: auto;
+        max-height: 250px;
+        max-width: 25%;
     }
 
     #title {
@@ -86,8 +88,7 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
         justify-content: space-between;
         align-items: center;
 
-        width: 75%;
-        height: 150px;
+        width: 65%;
 
         overflow: hidden;
         white-space: nowrap;
@@ -96,6 +97,8 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
         transition: all 1s;
 
         .short {
+            font-size: 2rem;
+
             opacity: 1;
             transform: translateX(45px);
             transition:
@@ -103,6 +106,8 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
                 transform 0.5s 0.5s;
         }
         .name {
+            font-size: 2rem;
+
             opacity: 0;
             transform: translateX(500px);
             transition:
@@ -115,5 +120,7 @@ const { href, short, name, img, issuer, score, level, dates } = Astro.props;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 30px;
+        width: 50%;
     }
 </style>
