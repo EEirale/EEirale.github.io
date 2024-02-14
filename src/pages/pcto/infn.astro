@@ -3,10 +3,27 @@ import Frame from '../../layouts/page-frame.astro';
 ---
 <Frame title="LAB2GO">
 	<div>
-		<img class="image" src="../../../public/images/lab2go-banner.png" alt="canto le armi e l'uomo"/>
+		<img class="image" src="../../images/lab2go-banner.png" alt="canto le armi e l'uomo"/>
 	</div>
 	<div>
 		<h1>INFN - LAB2GO</h1>
+		<h2>48 ore</h2>
+		<p>Il progetto PCTO – LAB2GO è finalizzato alla valorizzazione dei laboratori, dei musei e delle aree verdi delle scuole secondarie superiori, ed è nato grazie all’Istituto Nazionale di Fisica Nucleare (INFN) e alla Facoltà di Scienze di Sapienza Università di Roma</p>
+	</div>
+	<div class="box">
+		<ul>
+			<li>
+				<h2>Introduzione alle Onde</h2>
+				<p>Introduzione teorica alla fisica delle onde e alle loro proprietà con seguente sviluppo di un sonar in scalar tramite la piattaforma arduino</p>
+			</li>
+			<li>
+				<h2>Misure di Radioattività con Geiger e Arduino</h2>
+				<p>Introduzione teorica alla fisica del decadimento radioattivo con seguente sviluppo di un rilevatore Geiger sviluppato su piattaforma arduino. L'esperienza è completa di <a href="https://lab2go.roma1.infn.it/lib/exe/fetch.php?media=fisica:schededidattiche:cocito_geiger_23_ber.pdf">relazione conclusiva</a> sui rilevamenti e i dati osservati</p>
+				<div id="img-box">
+					<img id="working-staiton" src="../../images/workbench-lab2go.jpg" />
+				</div>
+			</li>
+		</ul>
 	</div>
 	
 </Frame>
@@ -17,17 +34,39 @@ import Frame from '../../layouts/page-frame.astro';
 		width: 100%;
 		align-items: center;
 		justify-content: center;
-		height: 30%;
 	}
 	.image {
 		width: 100%;
 	}
 
     h1 {
-        width: 80%;
+        width: 50%;
         font-family: Zen Dots;
         font-size: 3rem;
 		text-align: center;
-		margin-top: 100px;
+		margin-top: 50px;
     }
+
+	ul {
+		list-style-type: "🧪";
+		width: 75%;
+		align-items: center;
+	}
+
+	.box{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#img-box{
+		width: 100%;
+		align-items: center;
+	}
+
+	#working-staiton {
+		max-width: 50%;
+	}
 </style>

@@ -2,5 +2,30 @@
 import Frame from '../layouts/page-frame.astro';
 ---
 <Frame title="HOBBIES">
-	<h1>HOBBIES</h1>
+	<div class="section">
+		<h1>HOBBIES</h1>
+	</div>
+	
 </Frame>
+
+<style>
+	.section {
+		display: flex;
+		align-items: center;
+        flex-direction: column;
+
+		border-bottom: 2px solid black;
+	}
+
+	h1 {
+		font-family: Zen Dots;
+		width: 80%;
+
+        font-size: 3rem;
+	}
+	h2 {
+		font-family: Zen Dots;
+		width: 80%;
+        font-size: 2rem;
+	}
+</style>
