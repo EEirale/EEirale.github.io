@@ -5,7 +5,50 @@ import Frame from '../layouts/page-frame.astro';
 	<div class="section">
 		<h1>HOBBIES</h1>
 	</div>
-	
+	<div class="section">
+		<div class="container" id="violino">
+			<img id="violin-img" src="/images/Violin.png" alt="violin image"/>
+			<div>
+				<h2>MUSICA</h2>
+				<p> Suono il <b>violino</b> dal 2011, attualmente sotto il prof. Davide Mosca</p>
+				<p> Dal 2019 sono I Violino dell'Alba Filarmonica <b>Orchestra</b> </p>
+				<div class="container center">
+					<img src="/images/spotify.png" alt="spotify-logo" height=50 width=auto/>
+					<p> Ascolto numerosi generi musicali: <a href="https://open.spotify.com/user/emanuele.eirale?si=6ec4dfb80884460d">il mio Spotify</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="palestra">
+			<img id="gym-img" src="/images/Vanilla Health Club.png" alt="Vanilla Health Club logo"/>
+			<div>
+				<h2>Palestra</h2>
+				<p> Mi tengo in forma allenandomi in sala pesi due volte a settimana</p>
+			</div>
+		</div>
+		<div class="container">
+			<div id="gaming">
+				<h2>PC - GAMING</h2>
+				<p> Mi tengo aggiornato su nuove tecnologie di WebDevelopment e sto sviluppando la piattaforma <a href="https://www.nowclear.org/">Nowclear.org</a></p>
+				<p> Spendo il mio tempo libero giocando con i miei amici a vari titoli:</p>
+				<div id="slider-track">
+					<div class="slider">
+						<div>
+							<img class="slide" src="/images/minecraft.jpg" />
+						</div>
+						<div>
+							<img class="slide" src="/images/Horizon.jpg" />
+						</div>
+						<div>
+							<img class="slide" src="/images/Fortnite.jpg" />
+						</div>
+						<div>
+							<img class="slide" src="/images/Asphalt-9.webp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </Frame>
 
 <style>
@@ -15,6 +58,12 @@ import Frame from '../layouts/page-frame.astro';
         flex-direction: column;
 
 		border-bottom: 2px solid black;
+	}
+
+	.text-box {
+		display: flex;
+		width: 90%;
+		border-bottom: 2px solid #cecece;
 	}
 
 	h1 {
@@ -28,4 +77,98 @@ import Frame from '../layouts/page-frame.astro';
 		width: 80%;
         font-size: 2rem;
 	}
+
+	.container {
+		display: flex;
+		width: 90%;
+		border-radius: 25px;
+
+		margin-bottom: 100px;
+	}
+
+	.center {
+		align-items: center;
+		justify-content: center;
+	}
+
+	#violin-img {
+		height: 250px;
+		width: auto;
+		
+		rotate: -20deg;
+		transform: scaleX(-1);
+	}
+
+	#violino {
+		background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('/images/Orchestra.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#palestra {
+		background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('/images/gym.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#gaming {
+		display: flex;
+		align-items: center;
+        flex-direction: column;
+
+		background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255)), url('/images/room.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 25px;
+
+		width: 100%;
+	}
+
+	@keyframes scroll {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-600px * 4))}
+	}
+
+	#slider-track {
+		height: 300px;
+		width: 75%;
+		margin: auto;
+		overflow:hidden;
+
+		&::before,
+		&::after {
+			content: "";
+			height: 300px;
+			width: auto;
+			z-index: 2;
+		}
+
+		&::after {
+			right: 0;
+			top: 0;
+			transform: rotateZ(180deg);
+		}
+
+		&::before {
+			left: 0;
+			top: 0;
+		}
+
+		.slider {
+			animation: scroll 30s linear infinite;
+			display: flex;
+			width: calc(600px * 4);
+		}
+	
+		.slide {
+			height: 300px;
+			width: 600px;
+			object-fit: scale-down;
+		}
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
 </style>
